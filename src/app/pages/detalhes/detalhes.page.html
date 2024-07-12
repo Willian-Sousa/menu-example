@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button href="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-card>
+      <div class="ion-text-center">
+        <img src="{{items.imagem}}" alt="{{items.nome}}"></div>
+      <ion-card-header>
+        <ion-card-subtitle>
+          {{items.nome}}
+        </ion-card-subtitle>
+        <ion-card-title>
+          <h2>R${{items.preco.toFixed(2)}}</h2>
+        </ion-card-title>
+        <ion-card-subtitle>
+          <p>
+            {{items.descricao}}
+          </p>
+          <p>
+            {{items.porcao}}
+          </p>
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </ion-item>
+</ion-content>

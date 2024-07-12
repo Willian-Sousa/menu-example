@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Lanches</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size='6' *ngFor="let item of lanches; let i = index">
+        <ion-card (click)="mostrarDetalhes(i)">
+         <img src="{{item.imagem}}" alt="{{item.nome}}">
+          <ion-card-header>
+            <ion-card-subtitle>{{item.nome}}</ion-card-subtitle>
+            <ion-card-title>
+              <h2>R${{item.preco.toFixed(2)}}</h2>
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

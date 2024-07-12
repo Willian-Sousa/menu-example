@@ -1,0 +1,97 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Super combo de {{diaDaSemana}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-text-center ion-padding-top">
+    <a href="home"><img src="assets/images/logo.png" alt="logo" style='width:30%;'></a>
+  </div>
+
+  <hr color="red">
+
+  <ion-text color="danger">
+    <h3 class="ion-padding">Peça seu Super Combo de {{diaDaSemana}} e aproveite este Super Desconto!</h3>
+  </ion-text>
+  <hr color="red">
+
+  <h4 class="ion-padding-start">Neste Super Combo você terá:</h4>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail slot="start"><img src="{{pratoEn.imagem}}" alt="pratoDia"></ion-thumbnail>
+      <ion-col>
+        <p>Prato de Entrada</p>
+        <ion-text color="danger">
+          <h3>{{pratoEn.nome}}</h3>
+        </ion-text>
+        <p>{{pratoEn.descricao}}</p>
+      </ion-col>
+    </ion-item>
+
+    <ion-text color="danger">
+      <h1 class="ion-text-center">+</h1>
+    </ion-text>
+
+    <ion-item>
+      <ion-thumbnail slot="start"><img src="{{pratoPr.imagem}}" alt="pratoDia"></ion-thumbnail>
+      <ion-col>
+        <p>Prato Principal</p>
+        <ion-text color="danger">
+          <h3>{{pratoPr.nome}}</h3>
+        </ion-text>
+        <p>{{pratoPr.descricao}}</p>
+      </ion-col>
+    </ion-item>
+
+    <ion-text color="danger">
+      <h1 class="ion-text-center">+</h1>
+    </ion-text>
+
+    <ion-item>
+      <ion-thumbnail slot="start"><img src="{{lanche.imagem}}" alt="pratoDia"></ion-thumbnail>
+      <ion-col>
+        <p>Lanche</p>
+        <ion-text color="danger">
+          <h3>{{lanche.nome}}</h3>
+        </ion-text>
+        <p>{{lanche.descricao}}</p>
+      </ion-col>
+    </ion-item>
+
+    <ion-text color="danger">
+      <h1 class="ion-text-center">+</h1>
+    </ion-text>
+
+    <ion-item>
+      <ion-thumbnail slot="start"><img src="{{sobremesa.imagem}}" alt="pratoDia"></ion-thumbnail>
+      <ion-col>
+        <p>Sobremesa</p>
+        <ion-text color="danger">
+          <h3>{{sobremesa.nome}}</h3>
+        </ion-text>
+        <p>{{sobremesa.descricao}}</p>
+      </ion-col>
+    </ion-item>
+    <br>
+  </ion-list>
+
+  <hr color="red">
+  <div class="ion-padding-start">
+    <p>Preço real deste Super Combo</p>
+    <ion-text color="danger">
+      <h2 style="text-decoration: line-through;">R$ {{preco}}</h2>
+    </ion-text>
+    <p>Preço com Super desconto de 30%</p>
+    <ion-text color="success">
+      <h1>R$ {{precoDesconto}}</h1>
+    </ion-text>
+  </div>
+
+  <hr color="red">
+
+</ion-content>
